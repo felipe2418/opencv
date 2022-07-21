@@ -271,16 +271,16 @@ class bibliotecauis ():
         lista_usuarios = cursor.fetchall()
         cursor.close()
         biblioteca.close()
-        opcion=False
+        
         for i in lista_usuarios:
             
             if self.usuario==i[0] and int(self.contraseña)==i[1]:
                 print('BIENVENIDO ADMINISTRADOR (👍≖‿‿≖)👍')
                 self.menuadmi()
-                opcion = True
+         
                 
 
-        if opcion==False:
+        else:
             print('USUARIO O CONTRASEÑA INCORRECTO,INGRESE NUEVAMENTE (͠◉_◉᷅)')
             self.admi()
 
